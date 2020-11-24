@@ -11,18 +11,21 @@ export class InitialLaunchScreen extends Component {
                <View style={styles.languageWrapper}>
                     <TouchableOpacity>
                         <Text>
-                            <Text>English (United States)</Text>
+                            <Text style={styles.language}>English (United States)</Text>
                             <Icon name="caret-down" size={30} color={colors.gray1} />
                         </Text>
                     </TouchableOpacity>
                </View>
                <View style={styles.buttonContainer}>
-                    <Text>2</Text>
                     <Image style={styles.logo} source={require('../assets/instagramLogo.png')}></Image>
                     <PrimaryButton buttonLabel='create a new account' buttonBg={colors.primary} textColor={colors.secondary}></PrimaryButton>
+                    <PrimaryButton buttonLabel='Login' buttonBg={colors.secondary} textColor={colors.primary}></PrimaryButton>
                </View>
                <View style={styles.bottomWrapper}>
-                    
+                   <View style={styles.bottomContentWrapper}>
+                    <Text style={styles.from}>from</Text>
+                    <Text style={styles.facebook}>FACEBOOK</Text>
+                    </View>
                </View>
            </View>
        )
@@ -42,6 +45,9 @@ export const styles = StyleSheet.create({
         justifyContent:'flex-start',
         alignItems:'center'
     },
+    language:{
+        color:colors.gray1
+    },
     buttonContainer:{
         display:'flex',
         flex:1,
@@ -57,6 +63,21 @@ export const styles = StyleSheet.create({
     logo:{
         height:'25%',
         width:'50%'
-    }
+    },
+   bottomContentWrapper:{
+       borderTopColor:colors.gray1,
+       borderTopWidth:0.5,
+       width:'100%',
+       justifyContent:'center',
+       alignItems:'center',
+       padding:10
+       
+   },
+   from:{
+        color:colors.gray1
+   },
+   facebook:{
+        fontWeight:'bold'
+   }
 
 })
