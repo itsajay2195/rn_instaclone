@@ -1,15 +1,28 @@
 import React, {Component} from 'react'
-import {Text,View,StyleSheet,TouchableOpacity,Image} from 'react-native'
+import {Text,View,StyleSheet,TouchableOpacity,Image, Modal} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {colors} from '../config/colors'
 import PrimaryButton from '../components/PrimaryButton'
 
 export class InitialLaunchScreen extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            modalVisiblity:false
+        }
+    }
+
+   handleClick=()=>{
+       this.setState({
+           modalVisiblity: !this.state.modalVisiblity
+       })
+   }
    render(){
+    const {modalVisiblity}= this.state
        return(
            <View style={styles.container}>
                <View style={styles.languageWrapper}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.handleClick()}>
                         <Text>
                             <Text style={styles.language}>English (United States)</Text>
                             <Icon name="caret-down" size={30} color={colors.gray1} />
@@ -27,6 +40,19 @@ export class InitialLaunchScreen extends Component {
                     <Text style={styles.facebook}>FACEBOOK</Text>
                     </View>
                </View>
+
+               <Modal visible={modalVisiblity} transparent={true}>
+               <View style={styles.modalCotainer}>
+                       <View style={styles.modalContentCotainer}>
+
+                       </View>
+
+                   </View>
+                   <TouchableOpacity onPress={()=>this.handleClick()}>
+                       <Text>CLose the modal</Text>
+                   </TouchableOpacity>
+
+               </Modal>
            </View>
        )
    }
@@ -78,6 +104,17 @@ export const styles = StyleSheet.create({
    },
    facebook:{
         fontWeight:'bold'
+   },
+   modalCotainer:{
+       display:'flex',
+       flex:1
+   },
+   modalContentCotainer:{
+       display:'flex',
+       flex:1,
+       backgroundColor:colors.secondary,
+       marginLeft:20,
+       marginRight:20
    }
 
 })
