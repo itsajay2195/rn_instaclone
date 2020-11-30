@@ -56,7 +56,7 @@ export class InitialLaunchScreen extends Component {
                     </View>
                     <View >
                         <TouchableOpacity style={styles.closeModal} onPress={() => this.handleClick()}>
-                            <Text >Close the modal</Text>
+                            <Text >Close the modal   </Text>
                         </TouchableOpacity>
                     </View>
                 </Modal>
