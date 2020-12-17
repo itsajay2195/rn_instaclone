@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet, TouchableOpacity, Image, Modal } from 'react-native'
+import { Text, View, StyleSheet, TouchableOpacity, Image, Modal, FlatList } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { colors } from '../config/colors'
 import PrimaryButton from '../components/PrimaryButton'
-import { Colors } from 'react-native/Libraries/NewAppScreen';
 import SearchBox from '../components/SearchBox';
 
+
+
+const DATA = [
+    { id: 1, title: 'ENGLISH', sub: 'english' },
+    { id: 2, title: 'ENGLISH', sub: 'english' },
+    { id: 3, title: 'ENGLISH', sub: 'english' },
+    { id: 4, title: 'ENGLISH', sub: 'english' },
+    { id: 5, title: 'ENGLISH', sub: 'english' },
+    { id: 6, title: 'ENGLISH', sub: 'english' },
+    { id: 7, title: 'ENGLISH', sub: 'english' }]
 export class InitialLaunchScreen extends Component {
     constructor(props) {
         super(props);
@@ -50,7 +59,27 @@ export class InitialLaunchScreen extends Component {
                                 <Text style={styles.title}>SELECT YOUR LANGUAGE</Text>
                             </View>
                             <View style={styles.underline} />
-                            <SearchBox/>
+                            <View style={styles.searchboxWrapper}>
+                                <SearchBox />
+                                <View style={styles.underline} />
+                                <FlatList
+                                    data={DATA}
+                                    keyExtractor={item => item.id}
+                                    renderItem={({ item }) =>
+                                        <View style={styles.languageListWrapper}>
+                                            <Text style={styles.languageTitle}>{item.title}</Text>
+                                            <Text style={styles.subtitle}>{item.sub}</Text>
+
+                                        </View>
+
+                                    }
+
+                                />
+                            </View>
+
+
+
+
                         </View>
 
                     </View>
@@ -138,8 +167,25 @@ export const styles = StyleSheet.create({
         fontWeight: '700'
     },
     underline: {
-        height: 0.5,
-        backgroundColor: colors.gray2
+        height: 1,
+        backgroundColor: colors.gray1
+    },
+    searchboxWrapper: {
+        display: 'flex',
+        flex: 1
+    },
+    languageListWrapper: {
+        marginLeft: 10,
+        marginBottom: 15
+    },
+    subtitle:{
+        color:colors.gray1,
+        fontSize:15
+    },
+    languageTitle:{
+        fontSize: 20,
+        fontWeight: '700'
     }
+
 
 })
