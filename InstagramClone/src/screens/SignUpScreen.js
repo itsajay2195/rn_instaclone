@@ -31,15 +31,16 @@ class SignUpScreen extends Component {
                 ? colors.black
                 : colors.gray1,
             }]}>
-              <Text style={styles.title}>PHONE</Text>
+              <Text style={[styles.title,{color:isPhoneEnabled ? colors.black :colors.gray1}]}>PHONE</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.ifOptionSelected(true)} style={[styles.sectionSwitch, {
+            <TouchableOpacity onPress={() => this.switchButton(false)} style={[styles.sectionSwitch, {
               borderBottomColor: isPhoneEnabled
                 ? colors.gray1
                 : colors.black,
-            }]} >
-              <Text style={styles.title}>EMAIL</Text>
+            }]}>
+              <Text style={[styles.title,{color:isPhoneEnabled ? colors.gray1 :colors.black}]}>EMAIL</Text>
             </TouchableOpacity>
+            
           </View>
           <View style={styles.PhoneFormWrapper}>
             <PhoneForm></PhoneForm>
