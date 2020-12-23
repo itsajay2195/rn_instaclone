@@ -28,6 +28,7 @@ import SplashScreen from './src/screens/SplashScreen'
 import InitialLaunchScreen from './src/screens/InitialLaunchScreen'
 import  SignUpScreen from "./src/screens/SignUpScreen";
 import  SignUpScreen2 from "./src/screens/SignUpScreen2";
+import  FeedScreen from "./src/screens/FeedScreen";
 
 const App: () => React$Node = () => {
   return (
@@ -37,7 +38,8 @@ const App: () => React$Node = () => {
        
         {/* <InitialLaunchScreen></InitialLaunchScreen> */}
         {/* <SignUpScreen></SignUpScreen> */}
-        <SignUpScreen2></SignUpScreen2>
+        {/* <SignUpScreen2></SignUpScreen2> */}
+        <FeedScreen></FeedScreen>
       </View>
     </>
   );
