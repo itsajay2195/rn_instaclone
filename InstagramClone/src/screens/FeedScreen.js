@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet,Image } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 class FeedScreen extends Component {
     constructor(props) {
@@ -14,11 +14,11 @@ class FeedScreen extends Component {
 
                 <View style={styles.header}>
 
-                    <Image style={styles.cameraLogo} source={require('../assets/camera.jpg')}/>
-                    <Image style={styles.instagramLogo} source={require('../assets/instagramLogo.png')}/>
+                    <Image style={styles.cameraLogo} source={require('../assets/camera.jpg')} />
+                    <Image style={styles.instagramLogo} source={require('../assets/instagramLogo.png')} />
                     <View style={styles.headerRight}>
-                        <Image style={styles.cameraLogo} source={require('../assets/igtv.png')}/>
-                        <Image style={styles.cameraLogo} source={require('../assets/message.jpg')}/>
+                        <Image style={styles.cameraLogo} source={require('../assets/igtv.png')} />
+                        <Image style={styles.cameraLogo} source={require('../assets/message.jpg')} />
                     </View>
                 </View>
 
@@ -27,7 +27,9 @@ class FeedScreen extends Component {
                 </View>
 
                 <View style={styles.footer}>
-                    <Text> Footer </Text>
+                    <Image style={styles.cameraLogo} source={require('../assets/igtv.png')} />
+                    <Image style={styles.cameraLogo} source={require('../assets/message.jpg')} />
+                    <Image style={styles.cameraLogo} source={require('../assets/message.jpg')} />
                 </View>
 
 
@@ -38,38 +40,40 @@ class FeedScreen extends Component {
 
 export default FeedScreen;
 
-const styles =  StyleSheet.create({
-    container:{
-        display:'flex',
-        flex:1
+const styles = StyleSheet.create({
+    container: {
+        display: 'flex',
+        flex: 1
     },
-    header:{
-        display:'flex',
-        flexDirection:'row',
-        justifyContent:'space-between'
-        
+    header: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+
     },
-    headerRight:{
-        display:'flex',
-        flexDirection:'row',
+    headerRight: {
+        display: 'flex',
+        flexDirection: 'row',
     },
-    cameraLogo:{
+    cameraLogo: {
         height: 40,
         width: 40
     },
-    instagramLogo:{
-        
+    instagramLogo: {
+
         height: 60,
         width: 175
     },
-    feed:{
-        display:'flex',
-        flex:1
+    feed: {
+        display: 'flex',
+        flex: 1
     },
-    footer:{
-        position:'absolute',
-        bottom:30
-    }
+    footer: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        bottom: 30
+    },
 
 })
 
