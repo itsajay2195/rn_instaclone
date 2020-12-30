@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
+import { colors } from '../config/colors'
+import  Feed from '../components/Feed'
 
 class FeedScreen extends Component {
     constructor(props) {
@@ -23,13 +25,14 @@ class FeedScreen extends Component {
                 </View>
 
                 <View style={styles.feed}>
-                    <Text> Feed </Text>
+                   <Feed></Feed>
                 </View>
 
                 <View style={styles.footer}>
-                    <Image style={styles.cameraLogo} source={require('../assets/igtv.png')} />
-                    <Image style={styles.cameraLogo} source={require('../assets/message.jpg')} />
-                    <Image style={styles.cameraLogo} source={require('../assets/message.jpg')} />
+                    <Image style={styles.cameraLogo} source={require('../assets/home.png')} />
+                    <Image style={styles.cameraLogo} source={require('../assets/search.jpg')} />
+                    <Image style={styles.cameraLogo} source={require('../assets/heart.png')} />
+                    <Image style={styles.cameraLogo} source={require('../assets/profile.png')} />
                 </View>
 
 
@@ -48,7 +51,9 @@ const styles = StyleSheet.create({
     header: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        borderBottomColor:colors.gray1,
+        borderBottomWidth:1
 
     },
     headerRight: {
@@ -66,13 +71,17 @@ const styles = StyleSheet.create({
     },
     feed: {
         display: 'flex',
-        flex: 1
+        flex: 1,
+       
     },
     footer: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        bottom: 30
+        bottom: 30,
+        borderTopColor:colors.gray1,
+        borderTopWidth:1
+
     },
 
 })
