@@ -41,7 +41,7 @@ class Feed extends Component {
                     <Image style={styles.likesImage} source={require('../assets/heart.png')} />
                     <Text style={styles.likesCount}>1,223 Likes</Text>
                 </View>
-                <Text>    <Text style={styles.headertitle}>Subhiksha </Text><Text>Missing summary</Text></Text>
+                <Text>    <Text style={styles.headertitle}>Subhiksha</Text><Text>Missing summary</Text></Text>
                 <View>
                     <Text> Footer </Text>
                 </View>
