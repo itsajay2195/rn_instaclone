@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { colors } from '../config/colors'
 import  Feed from '../components/Feed'
+import  Stories from '../components/Stories'
 
 class FeedScreen extends Component {
     constructor(props) {
@@ -22,6 +23,10 @@ class FeedScreen extends Component {
                         <Image style={styles.cameraLogo} source={require('../assets/igtv.png')} />
                         <Image style={styles.cameraLogo} source={require('../assets/message.jpg')} />
                     </View>
+                </View>
+
+                <View style={styles.storiesWrapper}>
+                    <Stories></Stories>
                 </View>
 
                 <View style={styles.feed}>
@@ -83,6 +88,8 @@ const styles = StyleSheet.create({
         borderTopWidth:1
 
     },
-
+    storiesWrapper:{
+        display:'flex'
+    }
 })
 
