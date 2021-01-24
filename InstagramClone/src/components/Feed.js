@@ -12,7 +12,6 @@ class Feed extends Component {
     render() {
         return (
             <View style={styles.container}>
-
                 <View style={styles.headerWrapper}>
                     <View style={styles.headerLeftWrapper}>
                         <Image style={styles.imageThumb} source={require('../assets/face.jpeg')} />
@@ -42,9 +41,9 @@ class Feed extends Component {
                     <Text style={styles.likesCount}>1,223 Likes</Text>
                 </View>
                 <Text>    <Text style={styles.headertitle}>Subhiksha</Text><Text>Missing summary</Text></Text>
-                <View>
+                {/* <View>
                     <Text> Footer </Text>
-                </View>
+                </View> */}
 
             </View>
 
