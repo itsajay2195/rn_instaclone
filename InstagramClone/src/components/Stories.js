@@ -15,13 +15,19 @@ class Stories extends Component {
           <Text style={styles.HeaderText}>Stories</Text>
           <Text style={styles.HeaderText}>Watch all</Text>
         </View>
-        <ScrollView>
+        <ScrollView horizontal={true}>
           <View style={styles.storiesWrapper} >
-                <Text>hi</Text>
+                <Image style={styles.sotriesCricle} source={require('../assets/storiescircle.png')} />
                 <Image style={styles.storiesIcon} source={require('../assets/story_img.jpg')} />
-                <Image style={styles.storiesIcon} source={require('../assets/story_img.jpg')} />
-                {/* ../assets/story_img.jpg */}
+          
+               {/* ../assets/story_img.jpg */}
           </View>
+          <View style={styles.storiesWrapper} >
+                <Image style={styles.storiesIcon} source={require('../assets/story_img.jpg')} />
+          
+               {/* ../assets/story_img.jpg */}
+          </View>
+          
         </ScrollView>
         
         <View></View>
@@ -47,7 +53,16 @@ export default Stories;
    },
    storiesWrapper:{
      display:'flex',
-     flexDirection:'row'
+     flexDirection:'row',
+     padding:5 ,
+   },
+   sotriesCricle:{
+     position:'absolute',
+     height: 80,
+    width: 80,
+    borderRadius: 50,
+    padding:10 ,
+
    },
    storiesIcon:{
     height: 70,
