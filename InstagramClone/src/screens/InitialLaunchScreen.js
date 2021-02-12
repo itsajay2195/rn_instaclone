@@ -9,12 +9,12 @@ import SearchBox from '../components/SearchBox';
 
 const DATA = [
     { id: 1, title: 'ENGLISH', sub: 'english' },
-    { id: 2, title: 'ENGLISH', sub: 'english' },
-    { id: 3, title: 'ENGLISH', sub: 'english' },
-    { id: 4, title: 'ENGLISH', sub: 'english' },
-    { id: 5, title: 'ENGLISH', sub: 'english' },
-    { id: 6, title: 'ENGLISH', sub: 'english' },
-    { id: 7, title: 'ENGLISH', sub: 'english' }]
+    { id: 2, title: 'Tamil', sub: 'Tamil' },
+    { id: 3, title: 'Hindi', sub: 'Hindi' },
+    { id: 4, title: 'Arabic', sub: 'Arabic' },
+    { id: 5, title: 'SINHALA', sub: 'Sinhala' },
+    { id: 6, title: 'TELGU', sub: 'Telgu' },
+    { id: 7, title: 'GUJU', sub: 'Guju' }]
 export class InitialLaunchScreen extends Component {
     constructor(props) {
         super(props);
